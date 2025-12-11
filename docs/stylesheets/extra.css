@@ -1,0 +1,234 @@
+@font-face {
+	font-family: IRANSansXREG;
+	font-style: normal;
+	font-weight: 100;
+	src: url('../fonts/IRANSansX-Regular.woff') format('woff'),   
+	url('../fonts/IRANSansX-Regular.woff2') format('woff2');		
+}
+
+@font-face {
+	font-family: IRANSansXBOLD;
+	font-style: normal;
+	font-weight: 200;
+	src: url('../fonts/IRANSansX-Bold.woff') format('woff'),   
+	url('../fonts/IRANSansX-Bold.woff2') format('woff2');	
+}
+
+body{
+   font-family: IRANSansXREG;
+}
+
+h1, h2, h3, h4, h5, h6,input, textarea {
+	font-family: IRANSansXBOLD !important;
+}
+h1 {
+	font-weight: bold;
+}
+.wrapper {
+	max-width: 900px;
+	margin: 0 auto;
+}
+.ltr {
+	direction: ltr;
+}
+.text-right {
+	text-align: right;
+}
+.text-center {
+	text-align: center;
+}
+.text-left {
+	text-align: left;
+}
+.text-small {
+	font-size: 0.8em;
+}
+.text-xsmall {
+	font-size: 0.6em;
+}
+.text-large {
+	font-size: 1.2em;
+}
+.text-xlarge {
+	font-size: 1.4em;
+}
+.text-underline {
+	text-decoration:underline;
+}
+
+.text-thin {
+	font-weight: 400;
+}
+.text-UltraLight {
+	font-weight: 400;
+}
+.text-light {
+	font-weight: 400;
+}
+.text-regular {
+	font-weight: normal;
+}
+.text-medium {
+	font-weight: 700;
+}
+.text-demibold {
+	font-weight: 700;
+}
+.text-bold {
+	font-weight: bold;
+}
+
+.text-extrabold {
+	font-weight: 700;
+}
+.text-black {
+	font-weight: 700;
+}
+.text-extrablack {
+	font-weight: 700;
+}
+.text-heavy {
+	font-weight: 700;
+}
+
+::-webkit-input-placeholder {
+    font-family: IRANSansX;
+}
+::-moz-placeholder {
+    font-family: IRANSansX;
+}
+:-ms-input-placeholder {
+    font-family: IRANSansX;
+}
+::placeholder {
+    font-family: IRANSansX;
+}
+
+.md-header {
+  background-color: #1e1e1e !important; /* رنگ پس‌زمینه هدر */
+  color: #ffffff !important;           /* رنگ متن */
+  box-shadow: none;                    /* حذف سایه اضافی */
+}
+
+/* رنگ لینک‌های هدر */
+.md-header__title, 
+.md-header__topic, 
+.md-header a {
+  color: #ffffff !important;
+}
+
+/* رنگ آیکون‌ها مثل جستجو */
+.md-search__icon,
+.md-icon {
+  color: #ffffff !important;
+}
+
+.md-typeset p {
+	text-align: justify;
+  }
+
+  .md-typeset table {
+    width: 100% !important;
+    display: table;
+    table-layout: auto;
+}
+.nodes {
+	margin-left: auto;
+	margin-right: auto;
+	width: fit-content; /* یا یک عرض مشخص مثلا width: 200px */
+	font-family: IRANSansXREG !important;
+  }
+
+  .actor{
+	font-family: IRANSansXREG !important;
+  }
+
+/* استایل‌های Mermaid برای فونت ایران سنس */
+.mermaid {
+    font-family: IRANSansXREG !important;
+}
+
+/* گره‌ها و شکل‌های مختلف */
+.mermaid .node text,
+.mermaid .nodeLabel,
+.mermaid .cluster-label text,
+.mermaid .label,
+.mermaid .labelText {
+    font-family: IRANSansXREG !important;
+    font-size: 14px !important;
+}
+
+/* عناوین و برچسب‌های گره‌ها */
+.mermaid .node rect,
+.mermaid .node circle,
+.mermaid .node ellipse,
+.mermaid .node polygon {
+    font-family: IRANSansXREG !important;
+}
+
+/* متن روی فلش‌ها و اتصالات */
+.mermaid .edgeLabel,
+.mermaid .edgeLabel text,
+.mermaid .edgeLabel span {
+    font-family: IRANSansXREG !important;
+    font-size: 12px !important;
+}
+
+/* نمودارهای توالی */
+.mermaid .actor,
+.mermaid .actor-box,
+.mermaid .actor-line {
+    font-family: IRANSansXREG !important;
+}
+
+.mermaid .messageText,
+.mermaid .noteText,
+.mermaid .loopText {
+    font-family: IRANSansXREG !important;
+    font-size: 13px !important;
+}
+
+/* نمودارهای فلوچارت */
+.mermaid .flowchart-label,
+.mermaid .flowchartTitleText {
+    font-family: IRANSansXREG !important;
+}
+
+/* عناوین اصلی نمودارها */
+.mermaid .titleText {
+    font-family: IRANSansXBOLD !important;
+    font-weight: bold !important;
+    font-size: 16px !important;
+}
+
+/* تنظیمات کلی برای همه المان‌های متنی Mermaid */
+.mermaid text {
+    font-family: IRANSansXREG !important;
+}
+
+/* تنظیمات ویژه برای متن‌های فارسی */
+.mermaid [dir="rtl"] text,
+.mermaid text[dir="rtl"] {
+    direction: rtl !important;
+    text-anchor: end !important;
+}
+
+/* تنظیمات اضافی برای بهتر نمایش دادن فونت فارسی */
+.mermaid svg {
+    font-family: IRANSansXREG !important;
+}
+
+/* استایل برای نودهای مختلف */
+.mermaid .nodes text {
+    font-family: IRANSansXREG !important;
+}
+
+
+.md-search__options{
+
+    font-family: IRANSansXREG !important;
+
+	
+}
+
+

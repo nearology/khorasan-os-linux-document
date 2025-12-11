@@ -1,0 +1,93 @@
+site_name: کارگاه آزمایشگاه سیستم عامل
+
+nav:
+  - "📚 فصل یک":
+      - "📄 معرفی فصل": chapter1.md
+      - "📘 درسنامه‌ها":
+          - "درسنامه ۱: دستورات pwd و cd": lesson1.md
+          - "درسنامه ۲: ساختار کلی دستورات در لینوکس": lesson2.md
+          - "درسنامه ۳: دستور ls": lesson3.md
+          - "درسنامه ۴: مدیریت تاریخچه و صفحهٔ ترمینال": lesson4.md
+          - "درسنامه ۵: ساخت و حذف دایرکتوری‌ها": lesson5.md
+          - "درسنامه ۶: ساخت فایل و نمایش محتوا با touch و cat": lesson6.md
+          - "درسنامه ۷: مدیریت فایل‌ها با cp، mv و rm": lesson7.md
+          - "درسنامه ۸: مستندات دستورات و یادگیری عمیق در لینوکس": lesson8.md
+          - "درسنامه ۹: مدیریت تاریخ و تقویم با date و cal": lesson9.md
+          - "درسنامه ۱۰: استاندارد استریم‌ها در لینوکس": lesson10.md
+          - "درسنامه ۱۱: ساخت پایپ‌لاین در خط فرمان لینوکس": lesson11.md
+      - "🧩 تمرین‌ها":
+          - "تمرین ۱: دیدن سخت": exercise1.md
+          - "تمرین ۲: بازی بازی": exercise2.md
+          - "تمرین ۳: دفترچه تیمی": exercise3.md
+          - "تمرین ۴: بایگانی پروژه": exercise4.md
+          - "تمرین ۵: شکار گزینهٔ درست": exercise5.md
+          - "تمرین ۶: تقویم تیم پشتیبان": exercise6.md
+          - "تمرین ۷: پایپ‌لاین خطاگیر": exercise7.md
+  - "📚 فصل دو":
+      - "📄 معرفی فصل": chapter2.md
+      - "📘 درسنامه‌ها":
+          - "درسنامه ۲-۱: آشنایی با file و du": lesson2-1.md
+          - "درسنامه ۲-۲: ادیتورهای پیش‌فرض لینوکس (nano و vim)": lesson2-2.md
+          - "درسنامه ۲-۳: دایرکتوری‌های مهم و ساختار فایل‌بندی لینوکس": lesson2-3.md
+          - "درسنامه ۲-۴: مشاهدهٔ محتوا با more، less، head و tail": lesson2-4.md
+          - "درسنامه ۲-۵: برش متن با cut": lesson2-5.md
+          - "درسنامه ۲-۶: مرتب‌سازی و شمارش با sort و wc": lesson2-6.md
+          - "درسنامه ۲-۷: جست‌وجو در متن با grep": lesson2-7.md
+          - "درسنامه ۲-۸: جست‌وجوی فایل‌ها با find": lesson2-8.md
+          - "درسنامه ۲-۹: وایلدکاردها (Wildcards) در شل": lesson2-9.md
+          - "درسنامه ۲-۱۰: فشرده‌سازی و آرشیو فایل‌ها": lesson2-10.md
+          - "درسنامه ۲-۱۱: مقدمه‌ای بر awk": lesson2-11.md
+
+theme:
+  name: 'material'
+  language: 'fa'
+  direction: 'rtl'
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+
+
+        name: Switch to dark mode
+
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  font: false
+  feature:
+    - navigation.indexes
+    - search.highlight
+    - navigation.footer
+    
+extra_css:
+  - 'stylesheets/extra.css'
+
+
+markdown_extensions:
+  - pymdownx.arithmatex:
+      generic: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - tables
+  - pymdownx.highlight
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+extra_javascript:
+  - https://unpkg.com/mermaid@11.10.1/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
