@@ -99,3 +99,48 @@ grep -h "ERROR" ~/logs/service-*.log 2>> ~/logs/pipeline-errors.log \
 - `tee /dev/tty`: نمایش همزمان در صفحه
 - `wc -l > error-count.txt`: شمارش کل خطاها و نوشتن در فایل
 
+## تمرین ۸: یادداشتِ مریخی — نمونه‌حل خیلی ساده (Bash)
+
+```bash
+#!/bin/bash
+
+read -r q
+
+EXISTS=0
+CONTENT=""
+
+i=0
+while [ "$i" -lt "$q" ]
+do
+  read -r OP TEXT
+
+  if [ "$OP" = "touch" ]
+  then
+    if [ "$EXISTS" = "0" ]; then
+      EXISTS=1
+      CONTENT=""
+    fi
+  elif [ "$OP" = ">" ]
+  then
+    EXISTS=1
+    CONTENT="$TEXT"
+  elif [ "$OP" = ">>" ]
+  then
+    EXISTS=1
+    if [ -z "$CONTENT" ]; then
+      CONTENT="$TEXT"
+    else
+      CONTENT="$CONTENT
+$TEXT"
+    fi
+  fi
+
+  i=$((i + 1))
+done
+
+if [ "$EXISTS" = "0" ] || [ -z "$CONTENT" ]; then
+  echo "EMPTY"
+else
+  printf '%s\n' "$CONTENT"
+fi
+```
